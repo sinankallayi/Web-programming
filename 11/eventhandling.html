@@ -1,0 +1,40 @@
+<html>
+<head><title>event handling</title>
+<style>
+h3{
+color:black;
+font-family:sans-serif;
+font-weight:Bold;
+}
+body{
+background-color:ivory;
+}
+#pic{
+color:black;
+font-family:sans-serif;
+font-weight:Bold;
+}
+</style>
+</head>
+<body>
+<center>
+<br><br>
+<h1 id="pic">YELLOW</h1><br>
+<img id="img1" onmouseover="myfunction()" onmouseout="myfunction2()" src="yellow.png" width="600" height="400">
+<script>
+function myfunction()
+{
+document.getElementById("img1").src="yellow.png";
+document.getElementById("pic").innerHTML="<h3>YELLOW</h3>";
+}
+
+function myfunction2()
+{
+document.getElementById("img1").src="black.png";
+document.getElementById("pic").innerHTML="<h3>BLACK</h3>";
+
+}
+</script>
+</center>
+</body>
+</html>
