@@ -1,0 +1,59 @@
+ <html>
+    <head>
+    <title>Exam Form
+    </title>
+    <script>
+    function exam()
+    {
+    var m=0;
+    if(document.examForm.one.value=="h6")
+    m=m+1;
+    if(document.examForm.two.value=="ff")
+    m=m+1;
+    if(document.examForm.three.value=="color")
+    m=m+1;
+    if(document.examForm.four.value=="i")
+    m=m+1;
+    alert("Thankyou  for taking the online exam \n Your score is:"+m+" out of 4");
+    }
+    </script>
+    </head>
+    <body bgcolor="#f2bbbb">
+    <form name="examForm" onsubmit="return exam()" method="get">
+    <center><h1><u>EXAM FORM</u></h1>
+    Enter Your Name:<br><input type="text" name="name"/><br>
+    </center><br><br>
+    <p> 1) What is the smallest header in HTML by default<br>
+    <input type="radio" name="one" value="h1">h1<br>
+    <input type="radio" name="one" value="h2">h2<br>
+    <input type="radio" name="one" value="h4">h4<br>
+    <input type="radio" name="one" value="h6">h6<br>
+    </p>
+    <p>2) Which of the following property is used to chance the font of text? <br>
+    <input type="radio" name="two" value="ff">font-family<br>
+    <input type="radio" name="two" value="fs">font-size<br>
+    <input type="radio" name="two" value="fa">text-align<br>
+    <input type="radio" name="two" value="na">none of the above<br>
+    </p>
+    <p>
+    3) Which property is used to set colours in html<br>
+    <input type="radio" name="three" value="color"> color<br>
+    <input type="radio" name="three" value="bc">background-color<br>
+    <input type="radio" name="three" value="fc">font-color<br>
+    <input type="radio" name="three" value="tc">text-color<br>
+    </p>
+    <p>
+    4) Which element is used for making any text italic?<br>
+    <input type="radio" name="four" value="b">b<br>
+    <input type="radio" name="four" value="i">i<br>
+    <input type="radio" name="four" value="e">e<br>
+    <input type="radio" name="four" value="h">h<br>
+    </p>
+    <p>
+    <center>
+    <input type="submit" value="SUBMIT">
+    <input type="reset" value="RESET">
+    </center>
+    </p>
+    </body>
+    </html>
