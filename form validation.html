@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>form</title>
+</head>
+<body bgcolor="#ccd3de">
+<center><h2>REGISTRATION FORM</h2></center>
+<hr>
+<br>
+<form onsubmit="return validateForm()">
+<pre>FIRST NAME     <input type="text" id="Fname" size="25" maxlength="25">
+<br>
+LAST NAME      <input type="text" id="Lname" size="25" maxlength="25">
+<BR>
+FATHER'S NAME  <input type="text" id="Faname" size="25" maxlength="25">
+<br>
+MOTHER'S NAME  <input type="text" id="Moname" size="25" maxlength="25">
+<br>
+ADDRESS        <textarea cols="30" rows="4" value="address">  
+</textarea> 
+<br>
+DATE OF BIRTH  <input type="date" id="date" size="25" maxlength="25">
+<BR>
+GENDER        <input type="radio" id="gender"> Male  <input type="radio" name="gender"> Female   <input type="radio" name="gender"> Other<br>
+EMAIL         <input type="email" id="mail" size="25" maxlength="25">
+<br>
+PASSWORD      <input type="password" id="password" size="25" maxlength="25">
+<br>
+PHONE NUMBER  <input type="number" id="phone" size="10">
+<BR><br><BR>COURSE        <select  maxlength="30">  
+<option value="Course">Course</option>  
+<option value="BCA">BCA</option>  
+<option value="BBA">BBA</option>  
+<option value="B.Tech">B.Tech</option>  
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select>
+<br>
+ADD PHOTO     <input type="file"><BR>
+     <input type="reset" value="RESET"> <input type="submit" value="REGISTER">  
+</pre></form>
+
+<script>
+
+function validateForm()
+  {
+  var fname=document.getElementById("Fname").value;
+  var lname=document.getElementById("Lname").value;
+  var phoneno=document.getElementById("phone").value;
+  var email=document.getElementById("mail").value;
+  var password =document.getElementById("password").value;
+
+  
+  if(fname=="")
+  {
+  alert("First Name is required");
+  }
+  
+  if(lname=="")
+  {
+  alert("Last Name is required");
+  }
+  
+  if(phoneno=="")
+  {
+  alert("phone number is required");
+  }
+  
+  if(email=="")
+  {
+  alert("mail is required");
+  }
+  
+   if(password=="")
+  {
+  alert("password is required");
+  }
+ 
+ if(password.length<6)
+  {
+  alert("password must be 6 character");
+  }
+ }
+
+  
+</script>
+</body>
+</html>
