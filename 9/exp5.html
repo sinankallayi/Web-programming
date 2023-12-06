@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration</title>
+</head>
+<body bgcolor="ivory">
+<h2><center>REGISTRATION FORM</h2></center>
+<hr color="green">
+<form onsubmit="return validateForm()"><pre>
+<b>FIRST NAME:</b>       <input type="text" id="fname"><br><br>
+<b>LAST NAME:</b>        <input type="text" id="lname"><br><br>
+<b>EMAIL:</b>            <input type="text" id="email"><br><br>
+<b>PASSWORD:</b>         <input type="password" id="password"><br><br>
+<b>PHONE:</b>            <input type="number"  id="phone"><br><br>
+<b>ADDRESS:</b>          <textarea cols="25" rows="3" id="address"></textarea><br><br>
+<b>DATE OF BIRTH:</b>    <input type="date" id="date"><br><br>
+<b>GENDER:</b>           <input type="radio" id="mgender">Male <input type="radio" id="fgender">Female<br><br>
+<b>COURSE:</b>           <select>  <option value="Course">Course</option>  
+<option value="BCA">BCA</option>  
+<option value="BBA">BBA</option>  
+<option value="B.Tech">B.Tech</option>  
+<option value="MBA">MBA</option>  
+<option value="MCA">MCA</option>  
+<option value="M.Tech">M.Tech</option>  
+</select><br><br>
+<b>ADD PHOTO:</b>        <input type="file" id="image"><br>
+            <input type="reset" value="Reset">   <input type="submit" value="Register">
+</pre>
+</form>
+<script>
+
+function validateForm()
+  {
+  var fname=document.getElementById("fname").value;
+  var lname=document.getElementById("lname").value;
+  var phoneno=document.getElementById("phone").value;
+  var email=document.getElementById("email").value;
+  var password =document.getElementById("password").value;
+  var date=document.getElementById("date").value;
+  var fileName = document.getElementById("image").value;
+  var file_extension = fileName.split('.').pop();
+
+  
+  if(fname=="")
+  {
+  alert("First Name is required");
+  }
+  
+  if(lname=="")
+  {
+  alert("Last Name is required");
+  }
+  
+  if(phoneno=="")
+  {
+  alert("Phone number is required");
+  }
+  
+  if(email=="")
+  {
+  alert("Mail is required");
+  }
+  
+   if(password=="")
+  {
+  alert("Password is required");
+  }
+ 
+ if(password.length<6)
+  {
+  alert("Password must be 6 character");
+  }
+  
+  if(file_extension=="")
+  {
+  alert("Upload photo");
+  }
+  
+  if(date=="")
+  {
+  alert("Select date");
+  }
+  
+ }  
+
+</script>
+</body>
+</html>
